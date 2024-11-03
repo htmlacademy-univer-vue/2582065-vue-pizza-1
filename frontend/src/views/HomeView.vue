@@ -1,5 +1,5 @@
 <template>
-    <main class="content">
+  <main class="content">
     <form action="#" method="post">
 
       <div class="content__wrapper">
@@ -123,3 +123,6 @@
   import ingredients from '../mocks/ingredients.json';
   import sizes from '../mocks/sizes.json';
 </script>
+
+<style lang="scss" scoped>
+</style>
