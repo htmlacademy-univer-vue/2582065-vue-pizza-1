@@ -1,5 +1,5 @@
 <template>
-  <app-drag>
+  <app-drag :data="ingredient">
     <span class="filling filling--mushrooms">
       {{ ingredient.name }}
     </span>
