@@ -1,20 +1,20 @@
 <template>
-  <span class="filling filling--mushrooms">
-    {{ ingredient.name }}
-  </span>
+  <app-drag>
+    <span class="filling filling--mushrooms">
+      {{ ingredient.name }}
+    </span>
+  </app-drag>
   <app-counter></app-counter>
 </template>
 
 <script setup>
   import {toRefs} from 'vue';
 
+  import AppDrag from './AppDrag.vue';
   import AppCounter from './AppCounter.vue';
 
   const props = defineProps({
-    ingredient: {
-      type: [Object],
-      required: true,
-    },
+    ingredient: Object,
   });
 
   const {ingredient} = toRefs(props);

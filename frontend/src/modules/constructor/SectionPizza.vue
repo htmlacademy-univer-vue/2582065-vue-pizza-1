@@ -1,6 +1,9 @@
 <template>
   <div class="content__pizza">
-    <slot></slot>
+    <app-input type="text"
+               ariaText="Название пиццы"
+               placeholder="Введите название пиццы"
+               v-model="pizzaName"/>
 
     <div class="content__constructor">
       <div class="pizza pizza--foundation--big-tomato">
@@ -18,3 +21,11 @@
     </div>
   </div>
 </template>
+
+<script setup>
+  import {ref} from 'vue';
+
+  import AppInput from '../../common/components/AppInput.vue';
+
+  const pizzaName = ref(''); 
+</script>

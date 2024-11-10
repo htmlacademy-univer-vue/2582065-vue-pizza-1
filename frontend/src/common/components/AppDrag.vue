@@ -6,19 +6,19 @@
 </template>
 
 <script setup>
-import {toRefs} from 'vue';
+  import {toRefs} from 'vue';
 
-const props = defineProps({
-  data: {
-    type: [String, Object],
-    required: true,
-  },
-});
+  const props = defineProps({
+    data: {
+      type: [String, Object],
+      required: true,
+    },
+  });
 
-const {data} = toRefs(props);
+  const {data} = toRefs(props);
 
-const onDragStart = (event) => {
-  event.dataTransfer.effectAllowed = 'move';
-  event.dataTransfer.setData('application/json', JSON.stringify(data.value));
-};
+  const onDragStart = (event) => {
+    event.dataTransfer.effectAllowed = 'move';
+    event.dataTransfer.setData('application/json', JSON.stringify(data.value));
+  };
 </script>
