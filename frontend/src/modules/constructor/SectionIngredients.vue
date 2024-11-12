@@ -10,7 +10,7 @@
         <ul class="ingredients__list">
           <li class="ingredients__item"
               v-for="ingredient in ingredients">
-            <app-ingredient :ingredient="ingredient"/>
+            <app-filling :ingredient="ingredient"/>
           </li>
         </ul>
       </div>
@@ -22,5 +22,5 @@
   import ingredients from '../../mocks/ingredients.json';
 
   import AppSheet from '../../common/components/AppSheet.vue';
-  import AppIngredient from '../../common/components/AppIngredient.vue';
+  import AppFilling from '../../common/components/AppFilling.vue';
 </script>

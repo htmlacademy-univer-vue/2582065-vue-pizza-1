@@ -22,9 +22,10 @@
 </template>
 
 <script setup>
-  import {useTemplateRef, onMounted, ref} from 'vue';
+  import {defineEmits, useTemplateRef, onMounted, ref} from 'vue';
 
-  const input = useTemplateRef('counter-input')
+  const input = useTemplateRef('counter-input');
+  const emit = defineEmits(['increment', 'decrement']);
 
   const onInput = () => {
     validate();
@@ -59,10 +60,12 @@
 
   const onDecrementClick = () => {
     counterValue.value = counterValue.value - 1;
+    emit('decrement');
   }
 
   const onIncrementClick = () => {
     counterValue.value = counterValue.value + 1;
+    emit('increment');
   }
 
   const counterValue = ref(0);
