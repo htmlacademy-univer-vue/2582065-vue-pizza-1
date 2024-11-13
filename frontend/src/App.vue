@@ -1,22 +1,25 @@
 <template>
   <div class="main__wrapper">
     <div class="main__header">
-      <img src="@/assets/img/logo.svg" width="300" height="47" alt="V!U!E! Pizza" />
+      <app-header></app-header>
     </div>
-    <h1>Добро пожаловать!</h1>
-    <p>
-      Это проект V!U!E! Pizza для обучения на профессиональном онлайн‑курсе<br />
-      <b>«Vue.js для опытных разработчиков».</b>
-    </p>
+    <home-view></home-view>
   </div>
 </template>
 
+<script setup>
+  import AppHeader from './layouts/AppHeader.vue';
+  import HomeView from './views/HomeView.vue';
+</script>
+
 <style lang="scss">
 @import "@/assets/scss/app.scss";
+
 body {
   justify-content: center;
   align-items: center;
 }
+
 .main__wrapper {
   padding-bottom: 30px;
 
@@ -58,5 +61,4 @@ body {
     margin: 0 auto;
   }
 }
-
 </style>
