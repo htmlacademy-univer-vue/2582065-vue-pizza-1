@@ -1,6 +1,6 @@
 <template>
   <label class="input">
-    <span class="visually-hidden">{{ text }}</span>
+    <span class="visually-hidden">{{ ariaText }}</span>
     <input :type="name"
            :name="name"
            :placeholder="placeholder"
