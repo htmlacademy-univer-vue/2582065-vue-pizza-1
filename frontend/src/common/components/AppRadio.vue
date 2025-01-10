@@ -6,8 +6,8 @@
            :class="inputClasses"
            :checked="modelValue == value"
            @change="onChange" />
-    <b v-show="!!highlightedText">{{ highlightedText }}</b>
-    <span v-show="!!text">{{ text }}</span>
+    <b v-if="!!highlightedText">{{ highlightedText }}</b>
+    <span v-if="!!text">{{ text }}</span>
   </label>
 </template>
 
